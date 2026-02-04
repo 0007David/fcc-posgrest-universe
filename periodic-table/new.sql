@@ -65,7 +65,7 @@ INSERT INTO properties (atomic_number,atomic_mass,melting_point_celsius,boiling_
 
 -- You should delete the non existent element, whose atomic_number is 1000, from the two tables
 DELETE FROM properties WHERE atomic_number = 1000;
-DELETE FROM elements WHERE atomic_number = 1000
+DELETE FROM elements WHERE atomic_number = 1000;
 
 
 SELECT * FROM properties INNER JOIN elements USING(atomic_number) WHERE elements.name='Hydrogen' OR  properties.atomic_number=CAST('Hydrogen' AS NUMBER);
